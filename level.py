@@ -1,4 +1,4 @@
-from typing import List, Any
+#from typing import List, Any
 
 import platform
 
@@ -34,7 +34,7 @@ class Level:
                 if column == "-":
                     pf = platform.Platform(x, y)
                     self.platforms.append(pf)
-                elif column == "^":
+                elif column == "*":
                     db = platform.DieBlock(x, y)
                     self.platforms.append(db)
 
