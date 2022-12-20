@@ -16,7 +16,7 @@ def main():
     window = pygame.display.set_mode(camera.DISPLAY)
     pygame.display.set_caption(TITLE)
 
-    bg = pygame.image.load(level.BG_FILE)
+    bg = pygame.image.load(level.BG_FILE_3)
 
     lvl_1 = level.Level()
     entities = pygame.sprite.Group()

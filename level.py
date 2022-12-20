@@ -6,7 +6,7 @@ FILE = "./levels/1.txt"
 FILE_2 = "./levels/2.txt"
 BG_FILE = "./images/bg/super-mario.jpg"
 BG_FILE_2 = "./images/bg/mario_2.jpg"
-
+BG_FILE_3 = "./images/bg/mario_.jpg"
 
 class Level:
     path_level: str
