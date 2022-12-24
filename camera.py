@@ -5,20 +5,21 @@ WIN_HEIGHT = 640
 DISPLAY = (WIN_WIDTH, WIN_HEIGHT)
 
 
-class Camera:
-    def __init__(self, width, height):
-        self.camera_func = self.camera_config
-        self.state = pygame.Rect(0, 0, width, height)
 
-    def update(self, hero):
-        self.state = self.camera_func(self.state, hero.rect)
+class Camera:
+    def __init__(self, lvl_w, lvl_h):
+        self.camera_config = self.configure
+        self.state = pygame.Rect(0, 0, lvl_w, lvl_h)
+
+    def apdate(self, hero):
+        self.state = self.camera_config(self.state, hero.rect)
 
     def apply(self, target):
         return target.rect.move(self.state.topleft)
 
     @staticmethod
-    def camera_config(camera, hero_rect):
-        _, _, w, h = camera
+    def configure(past_state, hero_rect):
+        _, _, w, h = past_state
         x, y, _, _ = hero_rect
 
         x = WIN_WIDTH / 2 - x
@@ -26,9 +27,10 @@ class Camera:
 
 
         x = min(0, x)
-        x = max(-(camera.width - WIN_WIDTH), x)
+        x = max(-(w - WIN_WIDTH), x)
 
         y = min(0, y)
-        y = max(-(camera.height - WIN_HEIGHT), y)
+        y = max(-(h - WIN_HEIGHT), y)
+
 
         return pygame.Rect(x, y, w, h)

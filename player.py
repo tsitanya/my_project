@@ -4,6 +4,7 @@
 import pygame
 import pyganim
 import platform
+import monster
 
 MOVE_SPEED = 7
 WIDTH = 22
@@ -144,8 +145,11 @@ class Player(pygame.sprite.Sprite):
             if pygame.sprite.collide_rect(self, p):
 
 
-                if isinstance(p, platform.DieBlock):
+                if isinstance(p, platform.DieBlock) or isinstance(p, monster.Monster):
                     self.die()
+                elif isinstance(p, platform.TeleportBlock):
+                    self.teleporting(p.x, p.y)
+
 
                 else:
                     if xvel > 0:  # если движется вправо
