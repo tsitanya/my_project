@@ -145,7 +145,7 @@ class Player(pygame.sprite.Sprite):
             if pygame.sprite.collide_rect(self, p):
 
 
-                if isinstance(p, platform.DieBlock) or isinstance(p, monster.Monster):
+                if isinstance(p, platform.DieBlock) or isinstance(p, monster.Monster) or isinstance(p, platform.Magma):
                     self.die()
                 elif isinstance(p, platform.TeleportBlock):
                     self.teleporting(p.x, p.y)
@@ -200,5 +200,5 @@ class Player(pygame.sprite.Sprite):
         self.rect.y = y
 
     def die(self):
-        pygame.time.wait(500)
+        pygame.time.wait(400)
         self.teleporting(self.startX, self.startY)

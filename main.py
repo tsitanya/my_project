@@ -42,7 +42,12 @@ def main():
     entities.add(tp_1)
     lvl_1.platforms.append(tp_1)
 
-    tp_2 = level.platform.TeleportBlock(670, 35, 800, 750)
+    tp_2 = level.platform.TeleportBlock(1700, 32, 2000, 750)
+    animatet_antitis.add(tp_2)
+    entities.add(tp_2)
+    lvl_1.platforms.append(tp_2)
+
+    tp_2 = level.platform.TeleportBlock(120, 32, 1800, 32)
     animatet_antitis.add(tp_2)
     entities.add(tp_2)
     lvl_1.platforms.append(tp_2)

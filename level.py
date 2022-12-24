@@ -34,9 +34,15 @@ class Level:
                 if column == "-":
                     pf = platform.Platform(x, y)
                     self.platforms.append(pf)
+                elif column == "=":
+                    krp = platform.Kirpich(x, y)
+                    self.platforms.append(krp)
                 elif column == "*":
                     db = platform.DieBlock(x, y)
                     self.platforms.append(db)
+                elif column == "#":
+                    mg = platform.Magma(x, y)
+                    self.platforms.append(mg)
 
                 x += platform.PLATFORM_WIDTH
             y += platform.PLATFORM_HEIGHT

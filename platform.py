@@ -8,6 +8,7 @@ ANIMATION_DELAY = 1
 ANIMATION_TELEPORT = ('images/portal1.png',
                       'images/portal2.png')
 
+
 class Platform(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
@@ -17,12 +18,26 @@ class Platform(pygame.sprite.Sprite):
         self.rect = pygame.Rect(x, y, PLATFORM_WIDTH,
                                       PLATFORM_HEIGHT)
 
+class Kirpich(pygame.sprite.Sprite):
+    def __init__(self, x, y):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface((PLATFORM_WIDTH,
+                                     PLATFORM_HEIGHT))
+        self.image = pygame.image.load("images/kirpich.png")
+        self.rect = pygame.Rect(x, y, PLATFORM_WIDTH,
+                                      PLATFORM_HEIGHT)
 
 
 class DieBlock(Platform):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.image = pygame.image.load("images/dieBlock.png")
+
+
+class Magma(Platform):
+    def __init__(self, x, y):
+        super().__init__(x, y)
+        self.image = pygame.image.load("images/magma.png")
 
 
 class TeleportBlock(Platform):
