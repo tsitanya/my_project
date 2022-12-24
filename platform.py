@@ -18,12 +18,23 @@ class Platform(pygame.sprite.Sprite):
         self.rect = pygame.Rect(x, y, PLATFORM_WIDTH,
                                       PLATFORM_HEIGHT)
 
+
 class Kirpich(pygame.sprite.Sprite):
     def __init__(self, x, y):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.Surface((PLATFORM_WIDTH,
                                      PLATFORM_HEIGHT))
         self.image = pygame.image.load("images/kirpich.png")
+        self.rect = pygame.Rect(x, y, PLATFORM_WIDTH,
+                                      PLATFORM_HEIGHT)
+
+
+class Ground(pygame.sprite.Sprite):
+    def __init__(self, x, y):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface((PLATFORM_WIDTH,
+                                     PLATFORM_HEIGHT))
+        self.image = pygame.image.load("images/ground.png")
         self.rect = pygame.Rect(x, y, PLATFORM_WIDTH,
                                       PLATFORM_HEIGHT)
 

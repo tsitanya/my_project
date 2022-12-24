@@ -7,8 +7,7 @@ import player
 import level
 import camera
 
-# Объявляем переменные
-TITLE = "Омари"
+TITLE = "мариo"
 
 
 def main():
@@ -42,18 +41,24 @@ def main():
     entities.add(tp_1)
     lvl_1.platforms.append(tp_1)
 
-    tp_2 = level.platform.TeleportBlock(1700, 32, 2000, 750)
+    tp_2 = level.platform.TeleportBlock(1700, 32, 2020, 750)
     animatet_antitis.add(tp_2)
     entities.add(tp_2)
     lvl_1.platforms.append(tp_2)
 
-    tp_2 = level.platform.TeleportBlock(120, 32, 1800, 32)
-    animatet_antitis.add(tp_2)
-    entities.add(tp_2)
-    lvl_1.platforms.append(tp_2)
+    tp_3 = level.platform.TeleportBlock(2020, 670, 2020, 530)
+    animatet_antitis.add(tp_3)
+    entities.add(tp_3)
+    lvl_1.platforms.append(tp_3)
+
+#    tp_4 = level.platform.TeleportBlock(120, 32, 2020, 540)
+ #   animatet_antitis.add(tp_4)
+  #  entities.add(tp_4)
+   # lvl_1.platforms.append(tp_4)
+
 
 #    monsters = pygame.sprite.Group()
- #   mn = player.monster.Monster(630, 850, 2, 3, 600, 50)
+ #   mn = player.monster.Monster(120, 150, 2, 3, 150, 15)
   #  entities.add(mn)
    # monsters.add(mn)
     #lvl_1.platforms.append(mn)

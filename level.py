@@ -1,5 +1,3 @@
-from typing import List, Any
-
 import platform
 
 FILE = "./levels/1.txt"
@@ -36,6 +34,9 @@ class Level:
                     self.platforms.append(pf)
                 elif column == "=":
                     krp = platform.Kirpich(x, y)
+                    self.platforms.append(krp)
+                elif column == "_":
+                    krp = platform.Ground(x, y)
                     self.platforms.append(krp)
                 elif column == "*":
                     db = platform.DieBlock(x, y)
