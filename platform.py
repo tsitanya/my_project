@@ -34,10 +34,18 @@ class Ground(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.Surface((PLATFORM_WIDTH,
                                      PLATFORM_HEIGHT))
-        self.image = pygame.image.load("images/ground.png")
+        self.image = pygame.image.load("images/земля с травой.jpg")
         self.rect = pygame.Rect(x, y, PLATFORM_WIDTH,
                                       PLATFORM_HEIGHT)
 
+class Gr(pygame.sprite.Sprite):
+    def __init__(self, x, y):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface((PLATFORM_WIDTH,
+                                     PLATFORM_HEIGHT))
+        self.image = pygame.image.load("images/земля.png")
+        self.rect = pygame.Rect(x, y, PLATFORM_WIDTH,
+                                      PLATFORM_HEIGHT)
 
 class DieBlock(Platform):
     def __init__(self, x, y):

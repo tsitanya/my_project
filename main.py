@@ -46,15 +46,20 @@ def main():
     entities.add(tp_2)
     lvl_1.platforms.append(tp_2)
 
-    tp_3 = level.platform.TeleportBlock(2020, 670, 2020, 530)
+    tp_3 = level.platform.TeleportBlock(2020, 670, 2019, 530)
     animatet_antitis.add(tp_3)
     entities.add(tp_3)
     lvl_1.platforms.append(tp_3)
 
-#    tp_4 = level.platform.TeleportBlock(120, 32, 2020, 540)
- #   animatet_antitis.add(tp_4)
-  #  entities.add(tp_4)
-   # lvl_1.platforms.append(tp_4)
+    tp_4 = level.platform.TeleportBlock(120, 32, 3600, 750)
+    animatet_antitis.add(tp_4)
+    entities.add(tp_4)
+    lvl_1.platforms.append(tp_4)
+
+    tp_5 = level.platform.TeleportBlock(3450, 90, 3600, 750)
+    animatet_antitis.add(tp_5)
+    entities.add(tp_5)
+    lvl_1.platforms.append(tp_5)
 
 
 #    monsters = pygame.sprite.Group()

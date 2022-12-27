@@ -38,6 +38,9 @@ class Level:
                 elif column == "_":
                     krp = platform.Ground(x, y)
                     self.platforms.append(krp)
+                elif column == ";":
+                    gr = platform.Gr(x, y)
+                    self.platforms.append(gr)
                 elif column == "*":
                     db = platform.DieBlock(x, y)
                     self.platforms.append(db)
