@@ -41,6 +41,9 @@ class Level:
                 elif column == ";":
                     gr = platform.Gr(x, y)
                     self.platforms.append(gr)
+                elif column == "@":
+                    gr = platform.Brk(x, y)
+                    self.platforms.append(gr)
                 elif column == "*":
                     db = platform.DieBlock(x, y)
                     self.platforms.append(db)

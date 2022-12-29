@@ -1,8 +1,8 @@
 import pygame
 import pyganim
 
-M_WIDTH = 800
-M_HEIGHT = 640
+M_WIDTH = 32
+M_HEIGHT = 32
 MONSTER_COLOR = ('#2110FF')
 ANIMATION = ("images/fire1.png",
              "images/fire2.png")
@@ -50,7 +50,7 @@ class Monster(pygame.sprite.Sprite):
         for p in platforms:
             if pygame.sprite.collide_rect(self, p) and self != p:
                 self.x_vel = -self.x_vel
-                self.y_vel  = - self.y_vel
+                self.y_vel = - self.y_vel
 
 
 
