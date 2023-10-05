@@ -84,3 +84,4 @@ class TeleportBlock(Platform):
         self.image.fill(pygame.Color(PLATFORM_COLOR))
         self.anim.blit(self.image, (0, 0))
 
+

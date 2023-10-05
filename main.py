@@ -20,7 +20,7 @@ def main():
     lvl_1 = level.Level()
     entities = pygame.sprite.Group()
     animatet_antitis = pygame.sprite.Group()
-
+    monsters = pygame.sprite.Group()
 
     hero = player.Player(55, 55)
     timer = pygame.time.Clock()
@@ -46,20 +46,20 @@ def main():
     entities.add(tp_2)
     lvl_1.platforms.append(tp_2)
 
-    tp_3 = level.platform.TeleportBlock(2020, 670, 2019, 530)
+    tp_3 = level.platform.TeleportBlock(2020, 670, 2020, 527)
     animatet_antitis.add(tp_3)
     entities.add(tp_3)
     lvl_1.platforms.append(tp_3)
 
-#    tp_h = level.platform.TeleportBlock(120, 40, 500, 750)
- #   animatet_antitis.add(tp_h)
-  #  entities.add(tp_h)
-   # lvl_1.platforms.append(tp_h)
+    # tp_h = level.platform.TeleportBlock(120, 40, 2070, 670)
+    # animatet_antitis.add(tp_h)
+    # entities.add(tp_h)
+    # lvl_1.platforms.append(tp_h)
 
-    tp_h_1 = level.platform.TeleportBlock(120, 40, 50, 1100)
-    animatet_antitis.add(tp_h_1)
-    entities.add(tp_h_1)
-    lvl_1.platforms.append(tp_h_1)
+    #    tp_h_1 = level.platform.TeleportBlock(120, 45, 50, 940)
+    #   animatet_antitis.add(tp_h_1)
+    #  entities.add(tp_h_1)
+    # lvl_1.platforms.append(tp_h_1)
 
     tp_5 = level.platform.TeleportBlock(3450, 90, 3600, 750)
     animatet_antitis.add(tp_5)
@@ -71,17 +71,30 @@ def main():
     entities.add(tp_6)
     lvl_1.platforms.append(tp_6)
 
-    monsters = pygame.sprite.Group()
     mn = player.monster.Monster(700, 765, 2, 2, 150, 0)
     entities.add(mn)
     monsters.add(mn)
     lvl_1.platforms.append(mn)
 
-    monsters = pygame.sprite.Group()
-    mn = player.monster.Monster(250, 1150, 2, 2, 150, 0)
-    entities.add(mn)
-    monsters.add(mn)
-    lvl_1.platforms.append(mn)
+    mn_1 = player.monster.Monster(940, 945, 2, 2, 150, 13)
+    entities.add(mn_1)
+    monsters.add(mn_1)
+    lvl_1.platforms.append(mn_1)
+
+    mn_2 = player.monster.Monster(770, 945, 2, 2, 150, 13)
+    entities.add(mn_2)
+    monsters.add(mn_2)
+    lvl_1.platforms.append(mn_2)
+
+    mn_3 = player.monster.Monster(470, 945, 2, 2, 150, 13)
+    entities.add(mn_3)
+    monsters.add(mn_3)
+    lvl_1.platforms.append(mn_3)
+
+    mn_4 = player.monster.Monster(300, 945, 2, 2, 150, 13)
+    entities.add(mn_4)
+    monsters.add(mn_4)
+    lvl_1.platforms.append(mn_4)
 
     while True:
         timer.tick(60)
@@ -97,11 +110,9 @@ def main():
         for entitie in entities:
             window.blit(entitie.image, main_camera.apply(entitie))
 
-
         monsters.update(lvl_1.platforms)
         animatet_antitis.update()
         pygame.display.update()
 
 
-if __name__ == "__main__":
-    main()
+main()

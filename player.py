@@ -200,5 +200,5 @@ class Player(pygame.sprite.Sprite):
         self.rect.y = y
 
     def die(self):
-        pygame.time.wait(400)
+        pygame.time.wait(200)
         self.teleporting(self.startX, self.startY)

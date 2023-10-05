@@ -51,6 +51,7 @@ class Level:
                     mg = platform.Magma(x, y)
                     self.platforms.append(mg)
 
+
                 x += platform.PLATFORM_WIDTH
             y += platform.PLATFORM_HEIGHT
             x = 0
