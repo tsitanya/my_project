@@ -7,7 +7,7 @@ import player
 import level
 import camera
 
-TITLE = "мариo"
+TITLE = "ВАНЬКА"
 
 
 def main():
