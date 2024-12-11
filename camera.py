@@ -1,8 +1,11 @@
 import pygame
 
-WIN_WIDTH = 800
+WIN_WIDTH = 800 
+# Ширина игрового окна.
 WIN_HEIGHT = 640
+# Высота игрового окна.
 DISPLAY = (WIN_WIDTH, WIN_HEIGHT)
+# Кортеж, содержащий ширину и высоту окна, используется для инициализации окна Pygame.
 
 
 

@@ -145,7 +145,7 @@ class Player(pygame.sprite.Sprite):
             if pygame.sprite.collide_rect(self, p):
 
 
-                if isinstance(p, platform.DieBlock) or isinstance(p, monster.Monster) or isinstance(p, platform.Magma):
+                if isinstance(p, platform.DieBlock) or isinstance(p, monster.Monster):
                     self.die()
                 elif isinstance(p, platform.TeleportBlock):
                     self.teleporting(p.x, p.y)

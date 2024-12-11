@@ -2,8 +2,8 @@ import platform
 
 FILE = "./levels/1.txt"
 FILE_2 = "./levels/2.txt"
-BG_FILE = "./images/bg/mario.png"
-BG_FILE_2 = "./images/bg/mario_2.jpg"
+BG_FILE = "./images/bg/super-mario.jpg"
+
 
 
 class Level:
@@ -38,19 +38,9 @@ class Level:
                 elif column == "_":
                     krp = platform.Ground(x, y)
                     self.platforms.append(krp)
-                # elif column == ";":
-                #     gr = platform.Gr(x, y)
-                #     self.platforms.append(gr)
-                # elif column == "@":
-                #     gr = platform.Brk(x, y)
-                #     self.platforms.append(gr)
                 elif column == "*":
                     db = platform.DieBlock(x, y)
                     self.platforms.append(db)
-                # elif column == "#":
-                #     mg = platform.Magma(x, y)
-                #     self.platforms.append(mg)
-              
 
 
                 x += platform.PLATFORM_WIDTH

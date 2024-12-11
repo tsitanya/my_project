@@ -51,50 +51,23 @@ def main():
     entities.add(tp_3)
     lvl_1.platforms.append(tp_3)
 
-    # tp_h = level.platform.TeleportBlock(120, 40, 2070, 670)
-    # animatet_antitis.add(tp_h)
-    # entities.add(tp_h)
-    # lvl_1.platforms.append(tp_h)
-
-    #    tp_h_1 = level.platform.TeleportBlock(120, 45, 50, 940)
-    #   animatet_antitis.add(tp_h_1)
-    #  entities.add(tp_h_1)
-    # lvl_1.platforms.append(tp_h_1)
 
     tp_5 = level.platform.TeleportBlock(3450, 90, 3600, 750)
     animatet_antitis.add(tp_5)
     entities.add(tp_5)
     lvl_1.platforms.append(tp_5)
 
-    tp_6 = level.platform.TeleportBlock(4192, 159, 50, 1100)
-    animatet_antitis.add(tp_6)
-    entities.add(tp_6)
-    lvl_1.platforms.append(tp_6)
+    # tp_6 = level.platform.TeleportBlock(4192, 159, 50, 1100)
+    # animatet_antitis.add(tp_6)
+    # entities.add(tp_6)
+    # lvl_1.platforms.append(tp_6)
 
     mn = player.monster.Monster(700, 765, 2, 2, 150, 0)
     entities.add(mn)
     monsters.add(mn)
     lvl_1.platforms.append(mn)
 
-    mn_1 = player.monster.Monster(940, 945, 2, 2, 150, 13)
-    entities.add(mn_1)
-    monsters.add(mn_1)
-    lvl_1.platforms.append(mn_1)
 
-    mn_2 = player.monster.Monster(770, 945, 2, 2, 150, 13)
-    entities.add(mn_2)
-    monsters.add(mn_2)
-    lvl_1.platforms.append(mn_2)
-
-    mn_3 = player.monster.Monster(470, 945, 2, 2, 150, 13)
-    entities.add(mn_3)
-    monsters.add(mn_3)
-    lvl_1.platforms.append(mn_3)
-
-    mn_4 = player.monster.Monster(300, 945, 2, 2, 150, 13)
-    entities.add(mn_4)
-    monsters.add(mn_4)
-    lvl_1.platforms.append(mn_4)
 
     while True:
         timer.tick(60)
