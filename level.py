@@ -41,6 +41,9 @@ class Level:
                 elif column == "*":
                     db = platform.DieBlock(x, y)
                     self.platforms.append(db)
+                elif column == "P":
+                    p = platform.Finish(x, y)
+                    self.platforms.append(db)
 
 
                 x += platform.PLATFORM_WIDTH

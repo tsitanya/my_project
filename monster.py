@@ -1,5 +1,7 @@
 import pygame
 import pyganim
+import time
+import player
 
 M_WIDTH = 32
 M_HEIGHT = 32
@@ -39,18 +41,17 @@ class Monster(pygame.sprite.Sprite):
 
         self.collide(platforms)
 
+    
 
-        if abs(self.start_x - self.rect.x) > self.max_x:
-            self.x_vel = -self.x_vel
-
-        if abs(self.start_y - self.rect.y) > self.max_y:
-            self.y_vel = -self.y_vel
 
     def collide(self, platforms):
         for p in platforms:
             if pygame.sprite.collide_rect(self, p) and self != p:
                 self.x_vel = -self.x_vel
                 self.y_vel = - self.y_vel
+
+        start_time = time.time()
+        game_over = False
 
 
 

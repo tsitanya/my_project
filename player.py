@@ -4,7 +4,9 @@
 import pygame
 import pyganim
 import platform
+import time
 import monster
+
 
 MOVE_SPEED = 7
 WIDTH = 22
@@ -80,6 +82,11 @@ class Player(pygame.sprite.Sprite):
         self.up = False
         self.onGround = False  # На земле ли я?
 
+        self.start_time = time.perf_counter() #счетчик времени прохождения игры
+
+    def get_game_time(self):
+        return round(time.perf_counter() - self.start_time)
+
     def update(self, platforms):
         if self.left:
             self.xvel = -MOVE_SPEED  # Лево = x- n
@@ -89,6 +96,7 @@ class Player(pygame.sprite.Sprite):
             else:
                 self.anim_L.blit(self.image, (0, 0))
 
+            
         if self.right:
             self.xvel = MOVE_SPEED  # Право = x + n
             self.image.fill(pygame.Color(COLOR))
@@ -202,3 +210,5 @@ class Player(pygame.sprite.Sprite):
     def die(self):
         pygame.time.wait(200)
         self.teleporting(self.startX, self.startY)
+
+    

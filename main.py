@@ -6,8 +6,11 @@ import pygame
 import player
 import level
 import camera
+import time 
+import monster
 
 TITLE = "ВАНЬКА"
+
 
 
 def main():
@@ -18,6 +21,7 @@ def main():
 
     bg = pygame.image.load(level.BG_FILE)
 
+
     lvl_1 = level.Level()
     entities = pygame.sprite.Group()
     animatet_antitis = pygame.sprite.Group()
@@ -25,6 +29,7 @@ def main():
 
     hero = player.Player(55, 55)
     timer = pygame.time.Clock()
+    
 
     main_camera = camera.Camera(lvl_1.width, lvl_1.haght)
 
@@ -42,13 +47,12 @@ def main():
     # entities.add(tp_1)
     # lvl_1.platforms.append(tp_1)
 
-    
-
     mn = player.monster.Monster(700, 765, 2, 2, 150, 0)
     entities.add(mn)
     monsters.add(mn)
     lvl_1.platforms.append(mn)
 
+    
 
 
     while True:
@@ -68,6 +72,13 @@ def main():
         monsters.update(lvl_1.platforms)
         animatet_antitis.update()
         pygame.display.update()
+
+        
+
+    
+    
+
+
 
 
 main()
