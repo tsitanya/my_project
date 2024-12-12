@@ -37,6 +37,7 @@ ANIMATION_JUMP_LEFT = [("images/hero/jl.png", ANIMATION_DELAY)]
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, x, y):
+        start_time = 0
         pygame.sprite.Sprite.__init__(self)
         # скорость перемещения. 0 - стоять на месте
         self.xvel = 0
@@ -157,6 +158,8 @@ class Player(pygame.sprite.Sprite):
                     self.die()
                 elif isinstance(p, platform.TeleportBlock):
                     self.teleporting(p.x, p.y)
+                elif isinstance(p, platform.prise):
+                    self.cont()
 
 
                 else:
@@ -206,6 +209,12 @@ class Player(pygame.sprite.Sprite):
     def teleporting(self, x, y):
         self.rect.x = x
         self.rect.y = y
+    
+    def cont(self):
+        with open('score.txt', 'w') as file:
+            file.write(time.ctime(time.time() - self.start_time))
+        exit(0)
+    
 
     def die(self):
         pygame.time.wait(200)

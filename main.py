@@ -10,6 +10,7 @@ import time
 import monster
 
 TITLE = "ВАНЬКА"
+player.Player.start_time = time.time()
 
 
 
@@ -42,12 +43,17 @@ def main():
     entities.add(tp)
     lvl_1.platforms.append(tp)
 
+    pr = level.platform.prise(55, 765)
+    animatet_antitis.add(pr)
+    entities.add(pr)
+    lvl_1.platforms.append(pr)
+
     # tp_1 = level.platform.TeleportBlock(770, 280, 860, 240)
     # animatet_antitis.add(tp_1)
     # entities.add(tp_1)
     # lvl_1.platforms.append(tp_1)
 
-    mn = player.monster.Monster(700, 765, 2, 2, 150, 0)
+    mn = player.monster.Monster(200, 765, 2, 0, 700, 765)
     entities.add(mn)
     monsters.add(mn)
     lvl_1.platforms.append(mn)
@@ -72,13 +78,6 @@ def main():
         monsters.update(lvl_1.platforms)
         animatet_antitis.update()
         pygame.display.update()
-
-        
-
-    
-    
-
-
 
 
 main()

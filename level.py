@@ -42,7 +42,7 @@ class Level:
                     db = platform.DieBlock(x, y)
                     self.platforms.append(db)
                 elif column == "P":
-                    p = platform.Finish(x, y)
+                    #p = platform.Finish(x, y)
                     self.platforms.append(db)
 
 

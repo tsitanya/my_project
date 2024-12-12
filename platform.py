@@ -1,5 +1,6 @@
 import pygame
 import pyganim
+import player
 
 PLATFORM_WIDTH = 32  # Ширина прямоугольника
 PLATFORM_HEIGHT = 32  # Высота
@@ -56,17 +57,14 @@ class TeleportBlock(Platform):
 
 
 
-class GameOverDieBlock(DieBlock): # Дочерний класс, завершающий игру
-    def __init__(self, x, y, start_time):
-        super().__init__(x, y)
-        self.start_time = start_time
 
-    def update(self, player): # Обновляем состояние
-        if pygame.sprite.collide_rect(self, player):
-            end_time = time.time()
-            elapsed_time = round(end_time - self.start_time)
-            # Выводим сообщение о завершении игры с временем
-            print(f"Игра окончена! Время: {elapsed_time} сек.")  # Можно заменить на отображение на экране
-            pygame.quit()
-            return True #Сигнализирует об окончании игры
-        return False #Игра продолжается
+
+class prise(Platform):
+    def __init__(self, x, y):
+        super().__init__(x, y)
+        temp = []
+        self.image = pygame.image.load("images/princess_l.png")
+        
+
+
+
