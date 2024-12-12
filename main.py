@@ -11,6 +11,7 @@ TITLE = "ВАНЬКА"
 
 
 def main():
+
     pygame.init()
     window = pygame.display.set_mode(camera.DISPLAY)
     pygame.display.set_caption(TITLE)
@@ -36,31 +37,12 @@ def main():
     entities.add(tp)
     lvl_1.platforms.append(tp)
 
-    tp_1 = level.platform.TeleportBlock(770, 280, 860, 240)
-    animatet_antitis.add(tp_1)
-    entities.add(tp_1)
-    lvl_1.platforms.append(tp_1)
+    # tp_1 = level.platform.TeleportBlock(770, 280, 860, 240)
+    # animatet_antitis.add(tp_1)
+    # entities.add(tp_1)
+    # lvl_1.platforms.append(tp_1)
 
-    tp_2 = level.platform.TeleportBlock(1700, 32, 2020, 750)
-    animatet_antitis.add(tp_2)
-    entities.add(tp_2)
-    lvl_1.platforms.append(tp_2)
-
-    tp_3 = level.platform.TeleportBlock(2020, 670, 2020, 527)
-    animatet_antitis.add(tp_3)
-    entities.add(tp_3)
-    lvl_1.platforms.append(tp_3)
-
-
-    tp_5 = level.platform.TeleportBlock(3450, 90, 3600, 750)
-    animatet_antitis.add(tp_5)
-    entities.add(tp_5)
-    lvl_1.platforms.append(tp_5)
-
-    # tp_6 = level.platform.TeleportBlock(4192, 159, 50, 1100)
-    # animatet_antitis.add(tp_6)
-    # entities.add(tp_6)
-    # lvl_1.platforms.append(tp_6)
+    
 
     mn = player.monster.Monster(700, 765, 2, 2, 150, 0)
     entities.add(mn)
